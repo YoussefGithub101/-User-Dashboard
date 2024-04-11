@@ -1,0 +1,44 @@
+<input type="checkbox" id="checkbox">
+ 
+<header class="header">
+  <h2 class="u-name">dash<b>board</b>
+    <label for="checkbox">
+      <i id="navbtn"  class="ri-menu-line" aria-hidden="true"></i>
+ 
+    </label>
+  </h2>
+
+
+  <span class="p-input-icon-left searsh">
+    <i class="pi pi-search"></i>
+    <input type="text"    pInputText [(ngModel)]="value"  (input)="search()" placeholder="search user by id" />
+      </span>
+   
+  
+</header>
+<div class="body">
+  <nav class="side-bar">
+ 
+    <ul>
+      <li routerLink="User list" style="cursor: pointer;">
+        <a>
+          <i class="ri-computer-line" ></i>
+          <span>Users List</span>
+        </a>
+      </li>
+ 
+ 
+ 
+      <li>
+        <a href="#">
+          <i class="ri-shut-down-line"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="section-1">
+  <router-outlet></router-outlet>
+  
+  </section>
+</div>

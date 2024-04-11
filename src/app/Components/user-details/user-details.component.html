@@ -1,0 +1,53 @@
+ 
+@if (dataNotFound || SearchID==0){
+  <div class="grid justify-content-center my-7">
+    <div class="col-10">
+      <p-button label="back" icon="ri-arrow-go-back-line" routerLink="/User list"></p-button>
+    </div>
+    <div class="col-12 md:col-4">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold profile">
+          <div class="flex flex-column align-items-center justify-content-center ">
+             <img src="../assets/user not found2.png" width="170"   class="profile_img">
+       
+          </div>
+        </div>
+    </div>
+    <div class="col-12 md:col-6 profile">
+        <div class=" flex flex-column row-gap-5 align-items-center justify-content-center text-center p-3 border-round-sm bg-primary font-bold profile">
+          <h2>User not found</h2>
+ 
+        </div>
+    </div>
+  
+ </div>
+}  
+@else {
+  <div class="grid justify-content-center my-7">
+    <div class="col-10">
+      <p-button label="back" icon="ri-arrow-go-back-line" routerLink="/User list"></p-button>
+    </div>
+    <div class="col-12 md:col-4">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold profile">
+          <div class="flex flex-column align-items-center justify-content-center ">
+             <img src="{{userdata.avatar}}" width="128" height="126" class="profile_img">
+             <h2>{{userdata.first_name}} {{userdata.last_name}}</h2>
+          </div>
+        </div>
+    </div>
+    <div class="col-12 md:col-6 profile">
+        <div class=" flex flex-column row-gap-5 align-items-center justify-content-center text-center p-3 border-round-sm bg-primary font-bold profile">
+          <h2>profile Details</h2>
+          <ul>
+             <li>id: {{userdata.id}}</li>
+             <li>Email: {{userdata.email}}</li>
+             <li>first name: {{userdata.first_name}}</li>
+             <li>last name:{{userdata.last_name}}</li>
+          </ul>
+        </div>
+    </div>
+  
+ </div>
+ 
+
+}
+
